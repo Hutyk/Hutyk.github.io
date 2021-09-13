@@ -1,0 +1,481 @@
+body{
+    background: url(img/house.jpg) no-repeat;
+    /* background-image: url(/Project/img/unnamed-34.jpeg) no-repeat; */
+    /* background-attachment: fixed; */
+    background-size: 100%;
+    background-position: center;
+}
+
+/* Основне меню */
+.smarthouse{
+    background-color: rgba(245, 245, 245, 0.116);
+    height: 90px;
+    width: 550px;
+     border: 1px solid rgba(67, 107, 2, 0.534);
+    border-radius: 10px;
+    box-shadow: 6px 6px 20px rgba(49, 80, 2, 0.26);
+    margin: 0 auto;
+}
+.smarthouse div{
+    opacity: 1;
+    display: inline;
+    margin-left: 20px;
+}
+.smarthouse h5{
+   margin: 10px 0 10px 70px;
+}
+/* кнопки */
+.lightingbtn,
+.heatingbtn,
+.ventilationbtn,
+.conditioningbtn,
+.garagebtn,
+.camerabtn,
+.musicbtn {
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.musicbtn:hover {
+    transform: scale(1.15);
+}
+
+.camerabtn:hover {
+    transform: scale(1.15);
+}
+
+.garagebtn:hover {
+    transform: scale(1.15);
+}
+
+.conditioningbtn:hover {
+    transform: scale(1.15);
+}
+
+.ventilationbtn:hover {
+    transform: scale(1.15);
+}
+
+.heatingbtn:hover {
+    transform: scale(1.15);
+}
+
+.lightingbtn:hover {
+    transform: scale(1.15);
+}
+
+h3 {
+    color: black;
+}
+/* Перемикач - коробка навколо повзунка */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 16px;
+}
+
+/* Сховати прапорець HTML по замовчуванню */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Повзунок */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: none;
+    border: 1px solid rgba(67, 107, 2, 0.534);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 0px;
+    bottom: 0px;
+    background-color: white;
+    border: 1px solid rgba(67, 107, 2, 0.534);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: rgba(67, 107, 2, 0.534);
+}
+
+input:focus+.slider {
+    border: 1px solid rgba(67, 107, 2, 0.534);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(12px);
+    -ms-transform: translateX(12px);
+    transform: translateX(12px);
+}
+
+/* Заокругленні повзунки */
+.slider.round {
+    border-radius: 14px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/* Повзунок яскравості */
+.sliderR {
+    -webkit-appearance: none;
+    border-radius: 25px;
+    background: rgba(67, 105, 6, 0.534);
+}
+.sliderR:focus {
+    outline: none;
+    border-radius: 25px;
+    background: rgba(67, 105, 6, 0.534);
+}
+.sliderR::-webkit-slider-runnable-track {
+    /* width: 100%; */
+    height: 8px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: rgba(92, 105, 71, 0.534);
+    border-radius: 25px;
+    border: 0px solid #000101;
+}
+
+.sliderR::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 0px solid #000000;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -2px;
+}
+.sliderR:focus:-webkit-slider-runnable-track{
+    border-radius: 25px;
+    background: rgba(67, 105, 6, 0.534);
+}
+
+
+
+
+#Brightness{
+    margin: 0;
+}
+/* кнопки плюс мінус */
+.number {
+    margin: 5px 0 5px 0px;
+}
+.temp {
+    width: 100px;
+    margin: 0px;
+    display: inline-block;
+}
+.minus,
+.plus,
+.minuscond,
+.pluscond,
+.minusvent,
+.plusvent {
+    width: 20px;
+    height: 20px;
+    background-color: #f2f2f2d8;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+
+.thisTemp,
+.thisTempcond,
+.thisTempvent {
+    width: 20px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f2f2f27e;
+    display: inline-block;
+    vertical-align: middle;
+}
+/* Освітлення Опалення Вентиляція кондиціювання гараж*/
+.lightingmenu,
+.ventilationmenu,
+.conditioningmenu,
+.garagemenu,
+.heatingmenu,
+.cameramenu,
+.musicmenu {
+    border: 1px solid rgba(67, 107, 2, 0.534);
+    box-shadow: 6px 6px 20px rgba(49, 80, 2, 0.26);
+    width: 300px;
+    height: 140px;
+    margin: 10px 0 0 10px;
+}
+.lightingmenu h4,
+.ventilationmenu h4,
+.conditioningmenu h4,
+.garagemenu h4,
+.heatingmenu h4,
+.cameramenu h4,
+.musicmenu h4 {
+    margin: 0px;
+}
+.cameramenu video{
+    height: 75px;
+    width: 250px;
+    margin: 0;
+}
+/* режими роботи */
+.mode {
+    width: 150px;
+    margin: 0px;
+}
+.switchmode{
+    display: inline-block;
+}
+#winter,
+#summer,
+#auto,
+#wintercond,
+#summercond,
+#autocond {
+    position: relative;
+    height: 13px;
+    width: 13px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border-radius: 50%;
+    border: 1px solid rgba(67, 107, 2, 0.534);
+    cursor: pointer;
+}
+
+#winter::before,
+#summer::before,
+#auto::before,
+#wintercond::before,
+#summercond::before,
+#autocond::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid rgba(67, 107, 2, 0.534);
+}
+
+#winter:checked::after,
+#summer:checked::after,
+#auto:checked::after,
+#wintercond:checked::after,
+#summercond:checked::after,
+#autocond:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: rgba(67, 107, 2, 0.534);
+    border: 1px solid rgba(67, 107, 2, 0.534);
+    transform: translate(-50%, -50%);
+    visibility: visible;
+}
+
+/* Робоча область */
+.workingarea{
+    height: 525px;
+    width: 1005px;
+    margin: 0 auto;
+    /* border: 1px solid rgba(67, 107, 2, 0.534); */
+    border-radius: 10px;
+    /* box-shadow: 6px 6px 20px rgba(49, 80, 2, 0.26); */
+}
+.workingarea form{
+    display: inline-table;
+    background-color: rgba(245, 245, 245, 0.438);
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+}
+/* спливаюче вікно */
+#pop-upscontainer {
+    position: fixed;
+    z-index: 999999;
+    opacity: 0;
+    padding: 15px 15px 15px 15px;
+    border: 1px solid rgba(67, 107, 2, 0.534);
+    border-radius: 10px;
+    background-color: rgba(187, 255, 0, 0.411)
+}
+.pop-ups-bottom-right{
+    right: 12px;
+    bottom: 12px;
+}
+#pop-upscontainer div {
+    text-align: center;
+    display: block;
+}
+/* кнопка закрити */
+#closeL,
+#closeH,
+#closeV,
+#closeC,
+#closeG,
+#closeCam,
+#closeM {
+    width: 100px;
+    height: 20px;
+    background: #f2f2f27e;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid rgba(67, 107, 2, 0.534);
+}
+/* Музика */
+.player {
+    /* height: 95vh; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-top: 25px; */
+}
+
+/* Changing the font sizes to suitable ones */
+.now-playing {
+    font-size: 12px;
+}
+
+.track-name {
+    font-size: 12px;
+}
+
+.track-artist {
+    font-size: 10px;
+}
+
+/* Using flex with the row direction to
+   align items in a horizontal direction */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 35px;
+}
+
+.playpause-track,
+.prev-track,
+.next-track {
+    padding: 0 5px 0 5px;
+    opacity: 0.8;
+    /* Smoothly transition the opacity */
+    transition: opacity .2s;
+}
+
+/* Change the opacity when mouse is hovered */
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+    opacity: 1.0;
+}
+
+/* Define the slider width so that it scales properly */
+.slider_container {
+    width: 75%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modify the appearance of the slider */
+.seek_slider,
+.volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 3px;
+    background: black;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+/* Modify the appearance of the slider thumb */
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: gray;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Change the opacity when mouse is hovered */
+.seek_slider:hover,
+.volume_slider:hover {
+    opacity: 1.0;
+}
+
+.seek_slider {
+    width: 60%;
+}
+
+.volume_slider {
+    width: 30%;
+}
+
+.current-time,
+.total-duration {
+    font-size: 14px;
+    padding: 0 5px 0 5px;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+    padding: 0 5px 0 5px;
+}
+
+/* Change the mouse cursor to a pointer
+   when hovered over */
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward {
+    cursor: pointer;
+}

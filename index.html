@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Smart House</title>
+</head>
+<body>
+    <nav class="smarthouse">
+        <h5>Оберіть компоненти розумного будинку які хочете налаштувати:</h5>
+        <!-- Освітлення -->
+        <div class="lighting">
+            <button type="submit" class="lightingbtn" title="Освітлення">
+                <img src="img/32x32/bulb.png" height="35"/>
+            </button>
+        </div>
+        <!-- Опалення -->
+        <div class="heating">
+            <button type="submit" class="heatingbtn" title="Опалення">
+                <img src="img/32x32/heater.png" height="35"/>
+            </button>
+        </div>
+        <!-- Вентиляція -->
+        <div class="ventilation">
+            <button type="submit" class="ventilationbtn" title="Вентиляція">
+                <img src="img/32x32/ventilation.png" height="35"/>
+            </button>
+        </div>
+        <!-- Кондиціювання -->
+        <div class="conditioning">
+            <button type="submit" class="conditioningbtn" title="Кондиціювання">
+                <img src="img/32x32/air conditioning indoor.png" height="35"/>
+            </button>
+        </div>
+        <!-- Гараж -->
+        <div class="garage">
+            <button type="submit" class="garagebtn" title="Гараж">
+                <img src="img/32x32/garage.png" height="35"/>
+            </button>
+        </div>
+        <!-- Камера -->
+        <div class="camera">
+            <button type="submit" class="camerabtn" title="Камера">
+                <img src="img/32x32/dome camera.png" height="35"/>
+            </button>
+        </div>
+        <!-- Музика -->
+        <div class="music">
+            <button type="submit" class="musicbtn" title="Музика">
+                <img src="img/32x32/loudspeakers.png" height="35"/>
+            </button>
+        </div>
+    </nav>
+    <!-- Робоча область -->
+    <div class="workingarea">
+    </div>
+    <!-- спливаюче вікно -->
+    <div id="pop-upscontainer" class="pop-ups-bottom-right">
+        <div class="pop-ups-title"></div>
+            <div class="pop-upsmessage">
+        </div>
+    </div>
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    <script src="js/project.js"></script>
+</body>
+</html>
